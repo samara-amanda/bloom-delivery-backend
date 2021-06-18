@@ -1,0 +1,47 @@
+Storefront Website (Fenty Beauty or Edible Arrangement Inspo)
+
+Users should be able to……
+- Create an account/Log in
+- Look at a list of items
+- Look at individual items
+- Add to cart
+- View Cart
+- Delete an order 
+- View Previous Orders
+- Leave a  review for a product
+- Fill out billing & shipping information
+
+
+---Users---
+has_many :carts 
+has_many :orders, through: :carts
+has_many :items, through: :orders
+has_many :reviews
+
+:name, :address, :password_digest, :email
+
+---Item---
+has_many :orders
+has_many :carts, through: :orders
+has_many :reviews
+
+:name, :price - float, :description, :image
+
+---Orders---
+belongs_to :cart
+belongs_to :item
+
+:user_id, :item_id
+
+---Cart---
+belongs_to :User
+has_many :orders
+has_many :items, through: :orders
+
+:
+
+---Review---
+belongs_to :item
+belongs_to :User 
+
+:content
