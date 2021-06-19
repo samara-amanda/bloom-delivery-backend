@@ -36,11 +36,13 @@ single_vase_roses = Item.create(name: "Florentina", price: 125.00, description: 
 
 set_of_roses = Item.create(name: "The Classic Bundle", price: 150.00, description: "Meet our Classic Bundle Set—a sophisticated, elegant gift comprised of three stunning pieces—our timeless Le Mini Rounds, Le Mini Squares, and fragrant Votives, placed in a graceful pink and ivory gift box. Celebrate any occasion and elevate any space with this set of three gorgeous, polished pieces.", image:"https://cdn.shopify.com/s/files/1/0859/1856/products/ClassicBundle_white_RB_Red_2048x2048.jpg?v=1617287412")
 
-# --------------- Carts ---------------
-first_cart = Cart.create(user_id: sam.id)
+# --------------- Order ---------------
+order1 = Order.create(user_id: sam.id)
 
-#---------------- Orders -------------------
-first_order = Order.create(item_id: petite_roses.id, cart_id: first_cart.id)
+#---------------- Order Items-------------------
+orderitem1 = OrderItem.create(item_id: petite_roses.id, order_id: order1.id)
 
+orderitem2 = OrderItem.create(item_id: set_of_roses.id, order_id: order1.id)
+ 
 
 
