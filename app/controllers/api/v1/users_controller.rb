@@ -9,8 +9,10 @@ class Api::V1::UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
-        if @user.valid?
-            render json: @user, status: :created
+        
+        if @user.save
+            session[:user_id] = @user.id
+            render json: UserSerializer.new(@user), status: :created
         else 
             render json: {error: 'Something went wrong. Please try again.'}
         end
