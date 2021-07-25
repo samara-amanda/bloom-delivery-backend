@@ -7,6 +7,7 @@ class OrderSerializer
       {
         name: item.name,
         price: item.price,
+        image: item.image
       }
     end
   end
