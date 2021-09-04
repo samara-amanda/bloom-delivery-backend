@@ -38,11 +38,15 @@ set_of_roses = Item.create(name: "The Classic Bundle", price: 150.00, descriptio
 
 # --------------- Order ---------------
 order1 = Order.create(user_id: sam.id)
+order2 = Order.create(user_id: sam.id)
 
 #---------------- Order Items-------------------
 orderitem1 = OrderItem.create(item_id: petite_roses.id, order_id: order1.id)
 
 orderitem2 = OrderItem.create(item_id: set_of_roses.id, order_id: order1.id)
  
+##-------------
 
-
+order2item1 = OrderItem.create(item_id: large_square_roses.id, order_id: order2.id)
+order2item2 = OrderItem.create(item_id: small_vase_roses.id, order_id: order2.id)
+order2item3 = OrderItem.create(item_id: mini_roses.id, order_id: order2.id)
