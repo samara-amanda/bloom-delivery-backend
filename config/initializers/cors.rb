@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins ['http://localhost:3000', 'http://bloom-delivery-api.herokuapp.com']
+    origins ['http://localhost:3000', 'https://bloom-delivery-api.herokuapp.com']
 
     resource '*',
       headers: :any,
