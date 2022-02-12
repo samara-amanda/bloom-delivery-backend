@@ -12,7 +12,7 @@ class Api::V1::UsersController < ApplicationController
         
         if @user.save
             session[:user_id] = @user.id
-            render json: UserSerializer.new(@user), status: :created
+            render json: { user: @user, status: :created }
         else 
             render json: {error: 'Something went wrong. Please try again.'}
         end
@@ -20,7 +20,6 @@ class Api::V1::UsersController < ApplicationController
 
     def show
         user = User.find_by_id(params[:id])
-        render json: UserSerializer.new(user)
     end
 
     private
