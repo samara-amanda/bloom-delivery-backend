@@ -17,6 +17,7 @@ class Api::V1::SessionsController < ApplicationController
             render json: UserSerializer.new(current_user)
         else 
             render json: {error: "No one is logged in"}
+        end
     end
 
     def destroy
