@@ -24,7 +24,7 @@ small_round_roses = Item.create(name: "Eternity Roses Small Round Box", price: 2
 small_vase_roses = Item.create(name: "Fleura Vase with Eternity Roses", price: 225.00, description: "The Fleura Vase combines our coveted Le Plein style arrangement in a gorgeous handcrafted ceramic Vessel. The perfect home decor item for year round enjoyment.", image:"https://cdn.shopify.com/s/files/1/0859/1856/products/Blush_4_2048x2048.jpg?v=1589213582")
 
 
-bear_roses = Item.create(name: "Rosie The Bear", price: 75.00, description: "These bears are known to win the hearts of any and everyone that receive's them. Make someone happy today with Rosie the Bear.", image:"https://img.joomcdn.net/78b188a08fed8c94c1e68b505545e2b29b7e3c58_original.jpeg")
+bear_roses = Item.create(name: "Rosie The Bear", price: 75.00, description: "These bears are known to win the hearts of any and everyone that receive's them. Make someone happy today with Rosie the Bear.", image:"https://img.joomcdn.net/78b188a08fed8c94c1e68b505545e2b29b7e3c58_original.jpeg" )
 
 
 bin_roses = Item.create(name: "Assorted Color Roses in Acrylic Bin", price: 170.00, description: "4 rows of assorted color roses in an Acrylic bin that is great to spruce up any room in your home. Showcase your eternity flowers, they're well worth it.", image:"https://cdn.shopify.com/s/files/1/0075/4053/9439/products/9F0D1BD1-D9C3-4ADB-B158-05C51FC08665_629b4b06-ecc4-4b1c-9327-28da809fc729.jpg?v=1578436307")
